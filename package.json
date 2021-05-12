@@ -1,0 +1,15 @@
+{
+  "name": "faq-accordion-card-main",
+  "version": "1.0.0",
+  "description": "FAQ Accordion",
+  "main": "index.js",
+  "scripts": {
+    "sass:watch": "sass styles/sass/main.scss styles/css/style.css -w"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.32.12"
+  }
+}
