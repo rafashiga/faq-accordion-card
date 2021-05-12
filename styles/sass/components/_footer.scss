@@ -1,0 +1,14 @@
+.footer {
+	margin-top: rem(24);
+	color: $color-white;
+
+	a {
+		color: #000;
+		font-weight: 900;
+		transition: opacity 0.2s;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
+}

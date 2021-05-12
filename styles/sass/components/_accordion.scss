@@ -1,0 +1,71 @@
+.accordion {
+	&__item {
+		border-bottom: 1px solid $color-gray-100;
+		padding: 1rem 0 0.5rem 0;
+	}
+
+	&__title {
+		width: 100%;
+		background: none;
+		border: none;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		margin-bottom: rem(10);
+		color: $color-gray-800;
+		transition: color 0.3s;
+
+		&:hover {
+			color: $color-orange-400;
+		}
+
+		&--active {
+			font-weight: 900;
+		}
+
+		.arrow {
+			&--show {
+				animation: rotate 0.5s;
+				animation-fill-mode: forwards;
+			}
+
+			&--hide {
+				animation: rotateInverse 0.5s;
+				animation-fill-mode: forwards;
+			}
+		}
+	}
+
+	&__text {
+		width: 90%;
+		color: $color-gray-400;
+		line-height: rem(18);
+
+		opacity: 0;
+		height: 0;
+		overflow: hidden;
+		transition: opacity 0.3s ease-out, margin 0.3s;
+
+		&--show {
+			opacity: 1;
+			height: auto;
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+@keyframes rotate {
+	to {
+		transform: rotate(180deg);
+	}
+}
+
+@keyframes rotateInverse {
+	from {
+		transform: rotate(180deg);
+	}
+
+	to {
+		transform: rotate(0deg);
+	}
+}

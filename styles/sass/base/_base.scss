@@ -3,3 +3,31 @@
 	padding: 0;
 	box-sizing: border-box;
 }
+
+body {
+	font-family: 'Kumbh Sans', sans-serif;
+	font-size: 12px;
+	background: linear-gradient(0deg, $color-purple, $color-pink);
+}
+
+button,
+a {
+	cursor: pointer;
+}
+
+main {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 5rem 0;
+}
+
+h1 {
+	font-size: rem(36);
+}
+
+ul {
+	list-style: none;
+}

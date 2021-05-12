@@ -1,0 +1,131 @@
+.card {
+	width: 90%;
+	background: $color-white;
+	padding: rem(36) rem(24);
+	border-radius: rem(24);
+	position: relative;
+	margin-top: rem(100);
+
+	@include desktop-sm {
+		margin-top: 0;
+		width: 80%;
+		padding: rem(80) rem(60);
+		overflow: hidden;
+
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	@include desktop-xl {
+		width: rem(1100);
+		padding: rem(80) rem(120);
+	}
+
+	&__image {
+		&-group {
+			text-align: center;
+		}
+
+		&-mobile {
+			position: absolute;
+			top: rem(-110);
+			margin: 0 auto;
+			left: 0;
+			right: 0;
+
+			&--principal {
+				left: rem(-26);
+			}
+
+			&--pattern {
+				top: 0;
+			}
+
+			@include desktop-sm {
+				&-group {
+					display: none;
+				}
+			}
+		}
+
+		&-desktop {
+			position: absolute;
+			object-fit: cover;
+
+			&-group {
+				display: none;
+
+				@include desktop-sm {
+					display: initial;
+				}
+			}
+
+			&--principal {
+				z-index: 1;
+				width: rem(570);
+				margin: auto;
+				left: -60%;
+				right: 0;
+				top: rem(60);
+
+				@include desktop-sm {
+					width: rem(440);
+				}
+
+				@include desktop-md {
+					width: rem(500);
+				}
+
+				@include desktop-xl {
+					left: -65%;
+				}
+			}
+
+			&--pattern {
+				top: rem(-300);
+				left: rem(-720);
+
+				@include desktop-sm {
+					width: rem(1000);
+					top: rem(-200);
+					left: rem(-620);
+				}
+
+				@include desktop-md {
+					width: rem(1100);
+					top: rem(-280);
+					left: rem(-670);
+				}
+
+				@include desktop-xl {
+					width: rem(1200);
+					top: rem(-450);
+					left: rem(-760);
+				}
+			}
+		}
+	}
+
+	&__content {
+		margin-top: 9em;
+
+		h1 {
+			text-align: center;
+			margin-bottom: rem(24);
+		}
+
+		@include desktop-sm {
+			width: 40%;
+			margin-top: 0;
+
+			h1 {
+				text-align: start;
+			}
+		}
+
+		@include desktop-xl {
+			width: 40%;
+		}
+	}
+}
