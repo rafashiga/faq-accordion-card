@@ -17,12 +17,17 @@
   <a href="#space_invader-technologies">Technologies</a>
   <br>
   <br>
-  <img src="./src/assets/website.png">
+  <img src="./images/website.png">
   <br>
+  <img src="./images/website-mobile.png">
   <br>
-  <a href="https://shiga-faq-accordion-card.netlify.app/" target="_blank">
-    visit
-  </a>
+  <h3 align="center">
+    <strong>
+      <a href="https://shiga-faq-accordion-card.netlify.app/" target="_blank">
+        visit
+      </a>
+    </strong>
+  </h3>
 </p>
 
 ## :space_invader: Technologies
