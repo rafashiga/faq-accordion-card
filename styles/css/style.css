@@ -129,7 +129,8 @@ ul {
 .image-box {
   display: none;
   position: absolute;
-  margin-top: 12.7rem;
+  margin: auto;
+  top: 40%;
   left: -5.625rem;
   z-index: 9;
 }
