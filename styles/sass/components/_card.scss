@@ -1,15 +1,18 @@
 .card {
+	&-group {
+		position: relative;
+	}
+
 	width: 90%;
 	background: $color-white;
-	padding: rem(36) rem(24);
 	border-radius: rem(24);
 	position: relative;
+	margin: 0 auto;
 	margin-top: rem(100);
 
 	@include desktop-sm {
 		margin-top: 0;
-		width: 80%;
-		padding: rem(80) rem(60);
+		min-width: rem(800);
 		overflow: hidden;
 
 		display: flex;
@@ -19,14 +22,9 @@
 
 	@include desktop-xl {
 		width: rem(1100);
-		padding: rem(80) rem(120);
 	}
 
 	&__image {
-		&-group {
-			text-align: center;
-		}
-
 		&-mobile {
 			position: absolute;
 			top: rem(-110);
@@ -50,65 +48,37 @@
 		}
 
 		&-desktop {
-			position: absolute;
-			object-fit: cover;
+			display: none;
 
 			&-group {
-				display: none;
-
-				@include desktop-sm {
-					display: initial;
-				}
+				overflow: hidden;
 			}
 
 			&--principal {
-				z-index: 1;
-				width: rem(570);
+				position: absolute;
 				margin: auto;
-				left: -60%;
-				right: 0;
-				top: rem(60);
-
-				@include desktop-sm {
-					width: rem(440);
-				}
-
-				@include desktop-md {
-					width: rem(500);
-				}
-
-				@include desktop-xl {
-					left: -65%;
-				}
+				margin-top: rem(-190);
+				left: rem(-80);
+				z-index: 3;
 			}
 
 			&--pattern {
-				top: rem(-300);
-				left: rem(-720);
+				z-index: 1;
+				position: absolute;
+				margin: auto;
+				margin-top: rem(-555);
+				left: rem(-560);
+			}
 
-				@include desktop-sm {
-					width: rem(1000);
-					top: rem(-200);
-					left: rem(-620);
-				}
-
-				@include desktop-md {
-					width: rem(1100);
-					top: rem(-280);
-					left: rem(-670);
-				}
-
-				@include desktop-xl {
-					width: rem(1200);
-					top: rem(-450);
-					left: rem(-760);
-				}
+			@include desktop-sm {
+				display: initial;
 			}
 		}
 	}
 
 	&__content {
-		margin-top: 9em;
+		margin: rem(140) rem(24) rem(80);
+		padding-bottom: 4rem;
 
 		h1 {
 			text-align: center;
@@ -116,8 +86,10 @@
 		}
 
 		@include desktop-sm {
+			margin: rem(80) rem(40) rem(120) 0;
 			width: 40%;
-			margin-top: 0;
+
+			padding-bottom: 0;
 
 			h1 {
 				text-align: start;
@@ -125,7 +97,20 @@
 		}
 
 		@include desktop-xl {
+			margin: rem(80) rem(90) rem(120) 0;
 			width: 40%;
 		}
+	}
+}
+
+.image-box {
+	display: none;
+	position: absolute;
+	margin-top: 12.7rem;
+	left: rem(-90);
+	z-index: 9;
+
+	@include desktop-sm {
+		display: initial;
 	}
 }
